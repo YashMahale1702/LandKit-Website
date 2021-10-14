@@ -1,0 +1,48 @@
+.container {
+  // parent container
+  width: 120rem;
+  margin: 5rem auto;
+  width: 90%;
+  height: max-content;
+
+  // * Important change to 14.5 to convert to 8 x 8 grid [now 4 x 4]
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 5rem;
+  justify-items: center;
+  align-items: center;
+  grid-auto-flow: row;
+
+  &-item {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    transition: transform 0.3s ease;
+    will-change: transform, box-shadow;
+    box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: 0.2);
+    border-radius: 1.5rem;
+    border: 2px solid rgb(221, 220, 220);
+    background-color: $color-white;
+
+    &:hover,
+    &:active {
+      transform: translateY(-1rem);
+      box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: 0.15);
+      border: 3px solid rgb(221, 220, 220);
+    }
+  }
+
+  &-img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    display: block;
+  }
+}

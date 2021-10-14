@@ -1,0 +1,20 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: inherit;
+  font-family: $default-font-family;
+  font-weight: 400;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-grad-1, 0.4),
+    rgba($color-grad-1, 0.4)
+  );
+}
